@@ -11,12 +11,14 @@ import org.springframework.web.bind.annotation.GetMapping;
 public class WebpackdemoApplication {
 
 	public static void main(String[] args) {
+		/*System.setProperty("spring.devtools.restart.enabled", "false");
+		System.setProperty("spring.devtools.livereload.enabled", "true");*/
 		SpringApplication.run(WebpackdemoApplication.class, args);
 	}
 
 	@GetMapping("/")
 	public String index(Model model) {
-
+		model.addAttribute("test", "test4323");
 		return "index";
 	}
 
