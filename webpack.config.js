@@ -9,10 +9,12 @@ const webpackMerge = require('webpack-merge');
 
 const target = process.env.npm_lifecycle_event;
 const common = {
-    entry: path.join(__dirname + '/src/main/resources/static/entry/entry.js'),
+    entry: {
+        bundle: path.join(__dirname + '/src/main/resources/static/entry/entry.js')
+    },
     output: {
         path: path.join(__dirname, '/src/main/resources/static'),
-        filename: 'bundle.js'
+        filename: '[name].js'
     },
     resolve: {
         extensions: ['', '.js', '.css'],
