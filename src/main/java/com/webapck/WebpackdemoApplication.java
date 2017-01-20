@@ -18,7 +18,7 @@ public class WebpackdemoApplication {
 
 	@GetMapping("/")
 	public String index(Model model) {
-		model.addAttribute("test", "test4323");
+		model.addAttribute("test", "Server liveReload Test");
 		return "index";
 	}
 

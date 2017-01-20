@@ -3,5 +3,15 @@
  */
 import hello from  './hello';
 import world from  './world';
+import developer from  './developer';
+
+let main = {hello: hello};
+main.word = world;
+
+let dev = new developer('hansung', 'dell');
+main.dev = dev.getDeveloper();
 
 document.write(`${hello}, ${world}!`);
+document.write(main.dev);
+
+export default main.dev;
