@@ -24,13 +24,13 @@ const common = {
         }
     },
     module: {
-        preLoaders: [
+        /*preLoaders: [
             {
                 test: /\.js$/,
                 loader: 'eslint',
                 exclude: /(node_modules|bower_components)/
             }
-        ],
+        ],*/
         loaders: [
             {
                 test: /\.js$/,
@@ -55,13 +55,13 @@ const common = {
     },
     plugins: [
         new webpack.optimize.OccurenceOrderPlugin(),
-        new webpack.HotModuleReplacementPlugin(),
-        new webpack.NoErrorsPlugin(),
-        new CommonsChunkPlugin({
+        //new webpack.HotModuleReplacementPlugin(),
+        new webpack.NoErrorsPlugin()
+        /*new CommonsChunkPlugin({
             name: "commons",
             filename: "common.js",
             minChunks: Infinity,
-        })
+        })*/
     ]
 }
 
