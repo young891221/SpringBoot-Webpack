@@ -8,8 +8,7 @@ module.exports = {
     devtool: 'inline-source-map',
     devServer: {
         historyApiFallback: true,
-        progress: true, //progress bar show
-        compress: true, //enable gzip compress(압축)
+        compress: true,
         publicPath: '/',
         host: "0.0.0.0",
         port: 3000,
