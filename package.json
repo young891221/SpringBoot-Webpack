@@ -4,9 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "webpack-dev-server --inline",
     "watch": "webpack -d --watch",
-    "dev-build": "webpack -d --display-modules",
-    "prod-build": "webpack -d -p",
+    "dev": "webpack -d",
+    "prod": "webpack -p",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",

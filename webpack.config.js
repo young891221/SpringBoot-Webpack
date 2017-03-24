@@ -6,8 +6,9 @@ const webpack = require('webpack');
 const CommonsChunkPlugin = require("webpack/lib/optimize/CommonsChunkPlugin");
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const webpackMerge = require('webpack-merge');
-
+const devConfig = require('./webpack.dev.config.js');
 const target = process.env.npm_lifecycle_event;
+
 const common = {
     entry: {
         bundle: path.join(__dirname + '/src/main/resources/static/entry/entry.js')
@@ -55,13 +56,12 @@ const common = {
     },
     plugins: [
         new webpack.optimize.OccurenceOrderPlugin(),
-        //new webpack.HotModuleReplacementPlugin(),
-        new webpack.NoErrorsPlugin()
-        /*new CommonsChunkPlugin({
+        new webpack.NoErrorsPlugin(),
+        new CommonsChunkPlugin({
             name: "commons",
             filename: "common.js",
             minChunks: Infinity,
-        })*/
+        })
     ]
 }
 
@@ -75,12 +75,12 @@ const prodConfig = {
 }
 
 var config;
-if(target === 'watch') {
-    console.log('watch build');
-    config = common;
-} else {
+if(target === 'prod') {
     console.log('real build');
     config = webpackMerge(common, prodConfig);
+} else {
+    console.log('dev build');
+    config = webpackMerge(common, devConfig);
 }
 
 module.exports = config;
