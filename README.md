@@ -9,6 +9,8 @@ npm run start
 gradle build
 ```
 
+#### Test in http://localhost:3000
+
 about webpack [here](http://haviyj.tistory.com/17)
 <br>
 about webpack-dev-server [here](http://haviyj.tistory.com/25)
