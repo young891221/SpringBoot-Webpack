@@ -1,6 +1,7 @@
 .gradle
 /build/
 gradle/*
+/out
 node_modules/*
 !gradle/wrapper/gradle-wrapper.jar
 src/main/resources/static/bundle.*
