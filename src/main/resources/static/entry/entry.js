@@ -8,7 +8,7 @@ import developer from  './developer';
 let main = {hello: hello};
 main.word = world;
 
-let dev = new developer('hansung', 'dell');
+let dev = new developer('hansung', 'dell1234');
 main.dev = dev.getDeveloperItem();
 
 document.write(`${hello}, ${world}!`);
